@@ -8,7 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ObjectPage">
 
-    <Grid>
+    <StackPanel>
         <DataGrid x:Name="Objectivi"/>
-    </Grid>
+        <TextBlock  Text="Введите id(Type)" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="Object_type" HorizontalAlignment="Center" />
+        <TextBlock  Text="Введите id(Brigade)" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="Object_Brigade" HorizontalAlignment="Center" />
+        <Button x:Name="Select_Object" Content="Добавить" Click="Select_Object_Click" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Page>

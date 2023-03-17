@@ -29,5 +29,12 @@ namespace _1practika
             Typivi.ItemsSource = type.GetData();
 
         }
+
+        private void Select_Type_Click(object sender, RoutedEventArgs e)
+        {
+
+            type.InsertQuery(Type_name.Text);
+            Typivi.ItemsSource = type.GetData();
+        }
     }
 }

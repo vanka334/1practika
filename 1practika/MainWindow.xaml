@@ -17,14 +17,15 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Frame x:Name="Tables" Grid.Row="2" NavigationUIVisibility="Hidden"/>
-        <ComboBox x:Name="Chooser" SelectionChanged="Chooser_SelectionChanged" Grid.Row="1" Margin="0,30,660,0"/>
-        <TextBlock Text="Работа с базами данных" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="18" FontFamily="Arial Black"/>
+        <ComboBox x:Name="Chooser" SelectionChanged="Chooser_SelectionChanged" Grid.Row="1" Margin="0,30,660,0" Background="Red"/>
+        <TextBlock Text="Работа с базами данных" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="18" FontFamily="Arial Black">
         <TextBlock.Foreground>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FFF70909" Offset="1"/>
             </LinearGradientBrush>
         </TextBlock.Foreground>
+        </TextBlock>
 
 
     </Grid>

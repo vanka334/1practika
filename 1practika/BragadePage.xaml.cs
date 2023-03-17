@@ -27,5 +27,13 @@ namespace _1practika
             InitializeComponent();
             MayaBrigada.ItemsSource = brigadas.GetData();
         }
+
+        private void Select_Brigade_Click(object sender, RoutedEventArgs e)
+        {
+
+            brigadas.InsertQuery(Brigade_Name.Text);
+            MayaBrigada.ItemsSource = brigadas.GetData();
+
+        }
     }
 }

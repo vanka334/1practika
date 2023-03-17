@@ -6,3 +6,13 @@
     {
     }
 }
+
+namespace _1practika.Danie_DatasetTableAdapters
+{
+    partial class type_ObjectTableAdapter
+    {
+    }
+
+    public partial class BrigadeTableAdapter {
+    }
+}

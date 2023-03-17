@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TypePage">
 
-    <Grid>
+    <StackPanel>
         <DataGrid x:Name="Typivi"/>
-    </Grid>
+        <TextBlock Text="Введите тип" HorizontalAlignment="Center"/>
+        <TextBox x:Name="Type_name" HorizontalAlignment="Center" MinWidth="50"/>
+        <Button x:Name="Select_Type" Content ="Добавить" Click="Select_Type_Click" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Page>
