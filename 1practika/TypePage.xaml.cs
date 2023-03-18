@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,14 +35,6 @@ namespace _1practika
 
             type.InsertQuery(Type_name.Text);
             Typivi.ItemsSource = type.GetData();
-        }
-
-        private void Delete_Brigade_Click(object sender, RoutedEventArgs e)
-        {
-            int id = (int)(Typivi.SelectedItem as DataRowView).Row[0];
-            type.DeleteQuery(id);
-            Typivi.ItemsSource = type.GetData();
-
         }
     }
 }
