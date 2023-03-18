@@ -9,6 +9,10 @@
 
 namespace _1practika.Danie_DatasetTableAdapters
 {
+    partial class ObjectTableAdapter
+    {
+    }
+
     partial class type_ObjectTableAdapter
     {
     }

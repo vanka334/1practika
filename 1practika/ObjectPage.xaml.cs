@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,14 @@ namespace _1practika
             int id = (int)Object_type.SelectedValue;
             int id1 = (int)Object_Brigade.SelectedValue;
             objecty.InsertQuery(id, id1);
+            Objectivi.ItemsSource = objecty.GetData();
+
+        }
+
+        private void Delete_Object_Click(object sender, RoutedEventArgs e)
+        {
+            int id = (int)(Objectivi.SelectedItem as DataRowView).Row[0];
+            objecty.DeleteQuery(id);
             Objectivi.ItemsSource = objecty.GetData();
 
         }
