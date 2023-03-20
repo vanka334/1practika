@@ -42,7 +42,28 @@ namespace _1practika
             int id = (int)(MayaBrigada.SelectedItem as DataRowView).Row[0];
             brigadas.DeleteQuery(id);
             MayaBrigada.ItemsSource = brigadas.GetData();
+            
+        }
 
+        private void Update_Brigadas_Click(object sender, RoutedEventArgs e)
+        {
+            if(MayaBrigada.SelectedItem != null)
+            {
+
+            int id = (int)(MayaBrigada.SelectedItem as DataRowView).Row[0];
+            brigadas.UpdateQuery(Brigade_Name.Text, id);
+            MayaBrigada.ItemsSource = brigadas.GetData();
+            }   
+
+        }
+
+        private void MayaBrigada_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if(MayaBrigada.SelectedItem!= null) { 
+            
+                Brigade_Name.Text = Convert.ToString((MayaBrigada.SelectedItem as DataRowView).Row[1]);
+            }
         }
     }
 }

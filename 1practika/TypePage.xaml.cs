@@ -45,5 +45,24 @@ namespace _1practika
             Typivi.ItemsSource = type.GetData();
 
         }
+        
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            if (Typivi.SelectedItem != null)
+            {
+                int id = (int)(Typivi.SelectedItem as DataRowView).Row[0];
+                type.UpdateQuery(Type_name.Text, id);
+                Typivi.ItemsSource = type.GetData();
+            }
+        }   
+
+        private void Typivi_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Typivi.SelectedItem != null)
+            {
+                Type_name.Text = Convert.ToString((Typivi.SelectedItem as DataRowView).Row[1]);
+            }
+        }
     }
 }

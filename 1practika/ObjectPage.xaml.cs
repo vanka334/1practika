@@ -52,5 +52,24 @@ namespace _1practika
             Objectivi.ItemsSource = objecty.GetData();
 
         }
+
+        private void Update_Object_Click(object sender, RoutedEventArgs e)
+        {
+            if (Objectivi.SelectedItem != null)
+            {
+                int id = (int)(Objectivi.SelectedItem as DataRowView).Row[0];
+                objecty.UpdateQuery(Convert.ToInt32(Object_type.SelectedValue), Convert.ToInt32(Object_Brigade.SelectedValue), Convert.ToInt32(id));
+                Objectivi.ItemsSource = objecty.GetData();
+            }
+        }
+
+        private void Objectivi_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Objectivi.SelectedItem != null) { 
+            Object_Brigade.SelectedValue = Convert.ToString((Objectivi.SelectedItem as DataRowView).Row[2]);
+            Object_type.SelectedValue = Convert.ToString((Objectivi.SelectedItem as DataRowView).Row[1]);
+            }
+            
+        }
     }
 }

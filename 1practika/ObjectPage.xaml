@@ -9,13 +9,13 @@
       Title="ObjectPage">
 
     <StackPanel>
-        <DataGrid x:Name="Objectivi"/>
+        <DataGrid x:Name="Objectivi" SelectionChanged="Objectivi_SelectionChanged"/>
         <TextBlock  Text="Введите id(Type)" HorizontalAlignment="Center"/>
         <ComboBox x:Name="Object_type" HorizontalAlignment="Center" />
         <TextBlock  Text="Введите id(Brigade)" HorizontalAlignment="Center"/>
         <ComboBox x:Name="Object_Brigade" HorizontalAlignment="Center" />
         <Button x:Name="Select_Object" Content="Добавить" Click="Select_Object_Click" HorizontalAlignment="Center"/>
         <Button x:Name="Delete_Object" Content="Удалить" Click="Delete_Object_Click" HorizontalAlignment="Center" MinWidth="50" Margin="0,10,0,0"/>
-
+        <Button x:Name="Update_Object" Content="Изменить" Click="Update_Object_Click" HorizontalAlignment="Center" MinWidth="50" Margin="0,10,0,0"/>
     </StackPanel>
 </Page>
